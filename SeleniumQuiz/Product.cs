@@ -22,9 +22,13 @@ namespace SeleniumQuiz
         
         By AddButton3 = By.XPath("(//i[@class='fa fa-shopping-cart'])[6]");
         By AddButton4 = By.XPath("(//i[@class='fa fa-shopping-cart'])[8]");
-        
-
-
+        By ContinueButton = By.XPath("//button[@class='btn btn-success close-modal btn-block']");
+        By CartButton = By.XPath("(//i[@class='fa fa-shopping-cart'])[1]");
+        By SignInButton = By.XPath("//i[@class='fa fa-lock']");
+        By EmailField = By.XPath("//input[@data-qa='login-email']");
+        By PasswordField = By.XPath("//input[@data-qa='login-password']");
+        By LoginButton = By.XPath("//button[@data-qa='login-button']");
+        By CartButton1 = By.XPath("(//i[@class='fa fa-shopping-cart'])[1]");
         #endregion
 
         public void product()
@@ -36,13 +40,22 @@ namespace SeleniumQuiz
             clickButton(SeerchButton);
             clickButton(AddButton1);
             Thread.Sleep(3000);
+            clickButton(ContinueButton);
             clickButton(AddButton2);
             Thread.Sleep(3000);
+            clickButton(ContinueButton);
             clickButton(AddButton3);
             Thread.Sleep(3000);
+            clickButton(ContinueButton);
             clickButton(AddButton4);
             Thread.Sleep(3000);
-
+            clickButton(ContinueButton);
+            clickButton(CartButton);
+            clickButton(SignInButton);
+            textfield(EmailField, "usmanzahid401@gmail.com");
+            textfield(PasswordField, "usman444");
+            clickButton(LoginButton);
+            clickButton(CartButton1);
         }
     }
 }

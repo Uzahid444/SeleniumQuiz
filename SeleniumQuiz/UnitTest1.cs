@@ -47,6 +47,24 @@ namespace SeleniumQuiz
             DownloadInvoice d = new DownloadInvoice();
             d.download();
         }
+        [TestMethod]
+        public void products()
+        {
+            Product p = new Product();
+            p.product();
+        }
+        [TestMethod]
+        public void address()
+        {
+            VerifyAddress v = new VerifyAddress();
+            v.verifyaddress();
+        }
+        [TestMethod]
+        public void Removecart()
+        {
+            Remove r = new Remove();
+            r.remove();
+        }
 
     }
 }
